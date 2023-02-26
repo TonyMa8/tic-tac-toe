@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#square {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  cursor: pointer;
+  position: relative;
+}
+h1 {
+  text-align: center;
+}
+.tile {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-border {
+  border-right: 0.2em solid black;
+}
+.bottom-border {
+  border-bottom: 0.2em solid black;
+}
+.line {
+  position: absolute;
+  background-color: darkred;
+}
+.line-row-1 {
+  width: 100%;
+  height: 4px;
+  top: 15%;
+}
+.line-row-2 {
+  width: 100%;
+  height: 4px;
+  top: 48%;
+}
+.line-row-3 {
+  width: 100%;
+  height: 4px;
+  top: 83%;
+}
+.line-col-1 {
+  height: 100%;
+  width: 4px;
+  left: 15%;
+}
+.line-col-2 {
+  height: 100%;
+  width: 4px;
+  left: 48%;
+}
+.line-col-3 {
+  height: 100%;
+  width: 4px;
+  left: 83%;
+}
+.line-diagonal-1 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+.line-diagonal-2 {
+  width: 90%;
+  height: 4px;
+  top: 48%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+#game-over-area {
+  text-align: center;
+  border: grey 8px solid;
+  padding: 50px;
+  width: 50%;
+  margin-top: 50px;
+}
+h2 {
+  font-size: 2em;
+}
+button {
+  background-color: transparent;
+  font-size: 1.2em;
+}
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.x-hover:hover::after {
+  content: "X";
+  opacity: 30%;
+}
+.o-hover:hover::after {
+  content: "O";
+  opacity: 30%;
+}
